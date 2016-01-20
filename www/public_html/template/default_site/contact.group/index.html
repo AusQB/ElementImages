@@ -1,0 +1,59 @@
+{layout="contact/.layout"}
+
+<div class="row">
+	<div class="large-12 columns">
+
+		<h1>Contact</h1>
+		<p>Please fill out the form below with any questions or feedback.</p>
+
+		{exp:freeform:form form_name="contact" form:id="contact-form" required="first_name|email" inline_errors="yes" }
+		<div class="row">
+			<div class="medium-6 columns">
+				<div class="row">
+					<div class="large-6 columns">
+					{freeform:field:first_name attr:placeholder="First Name (required)" attr:required="required"}
+					{if freeform:error:first_name}
+					    <strong class="error">{freeform:error:first_name}</strong>
+					{/if}
+					</div>
+					<div class="large-6 columns">
+					{freeform:field:last_name attr:placeholder="Last Name"}
+					{if freeform:error:last_name}
+					    <strong class="error">{freeform:error:last_name}</strong>
+					{/if}
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+					{freeform:field:email attr:type="email" attr:placeholder="Email (required)" attr:required="required"}
+					{if freeform:error:email}
+					    <strong class="error">{freeform:error:email}</strong>
+					{/if}
+					</div>
+				</div>
+			</div>
+			<div class="medium-6 columns">
+				<div class="row">
+					<div class="large-12 columns">
+					{freeform:field:user_message attr:placeholder="Message"}
+					{if freeform:error:user_message}
+					    <strong class="error">{freeform:error:user_message}</strong>
+					{/if}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-12 columns clearfix">
+				<button class="right" type="submit" name="submit">Submit</button>
+			</div>
+		</div>
+		{/exp:freeform:form}
+
+		<div id="contact-sent" style="display:none;">
+			<h2><i class="fa fa-check-circle" style="color:#95D725;"></i> Form submitted successfully</h2>
+			<h3>Thanks for enquiring, I'll be in touch as soon as possible.</h3>
+		</div>
+
+	</div>
+</div>

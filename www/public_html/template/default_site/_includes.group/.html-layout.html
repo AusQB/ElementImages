@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {exp:seo_lite use_last_segment="yes"}
+
+    <link rel="shortcut icon" href="{assets}/img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{assets}/img/apple-touch-icon.png" />
+
+    {layout:css}
+
+    <link href='http://fonts.googleapis.com/css?family=Questrial|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{assets}/css/foundation.css" />
+    <link rel="stylesheet" href="{assets}/css/main.css" />
+
+    {layout:head_js}
+
+    <script src="{assets}/js/vendor/modernizr.js"></script>
+
+</head>
+<body>
+
+<header>
+    <div class="row" data-equalizer>
+        <div class="small-4 columns" data-equalizer-watch>
+            <a id="logo" href="{site_url}">
+                <img id="logo-image" src="{assets}/img/logo.png" alt="" />
+            </a>
+        </div>
+        <div class="small-8 columns" data-equalizer-watch>
+            <div id="header-social-icons">
+                <ul class="social-icons">
+                    <li class="social-facebook"><a href="https://www.facebook.com/pages/Element-Images/283992211783478" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li class="social-instagram"><a href="https://instagram.com/element.images/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                    <li class="social-linkedin"><a href="https://au.linkedin.com/pub/katy-cameron/57/8b7/35" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <nav>
+                <!-- <ul id="menu"> -->
+                {exp:taxonomy:nav tree_id="1" ul_css_id="menu" display_root="no"}
+                    <li class="{node_active}"><a href="{node_url}">{node_title}</a></li>
+                {/exp:taxonomy:nav}
+                    <!-- <li {if segment_1 == 'about'}class="active"{/if}><a href="/about">About</a></li>
+                    <li {if segment_1 == 'galleries'}class="active"{/if}><a href="/galleries">Galleries</a></li>
+                    <li {if segment_1 == 'contact'}class="active"{/if}><a href="/contact">Contact</a></li> -->
+                <!-- </ul> -->
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div id="contents">
+    {layout:contents}
+</div>
+
+<footer>
+    <div class="row">
+        <div class="small-7 medium-9 columns">
+            <p id="copyright">&copy; {site_name} {current_time format="%Y"}</p>
+            <a id="rgg-logo" href="http://rggwebdesigns.com" target="_blank"><img style="max-width:125px;" src="{assets}/img/rgg_logo_landscape.png" /></a>
+        </div>
+        <div class="small-5 medium-3 columns">
+            <div class="clearfix">
+                <ul class="social-icons right">
+                    <li class="social-facebook"><a href="https://www.facebook.com/pages/Element-Images/283992211783478" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li class="social-instagram"><a href="https://instagram.com/element.images/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                    <li class="social-linkedin"><a href="https://au.linkedin.com/pub/katy-cameron/57/8b7/35" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="{assets}/js/vendor/jquery.js"></script>
+<script src="{assets}/js/foundation.min.js"></script>
+<!-- <script src="{assets}/js/foundation/foundation.clearing.js"></script> -->
+<script>$(document).foundation();</script>
+<script src="{assets}/js/main.js"></script>
+
+{layout:foot_js}
+
+</body>
+</html>

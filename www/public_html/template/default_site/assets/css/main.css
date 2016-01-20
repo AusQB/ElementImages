@@ -1,0 +1,273 @@
+html {
+	background: #F47321;
+}
+
+body {
+	color: #919295;
+	font-family: 'Open Sans', sans-serif;
+	height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #919295;
+	font-family: 'Questrial', sans-serif;
+	font-weight: 400;
+}
+
+a, a:link, a:visited, a:active {
+	color: #F47321;
+}
+
+body > header {
+	background: #FFF;
+	border-bottom: 1px solid #EDEDED;
+	position: relative;
+	width: 100%;
+	z-index: 100;
+}
+
+body > header nav {
+	bottom: 0;
+	position: absolute;
+	right: 10px;
+}
+
+body > footer {
+	background: #F47321;
+	border-top: 1px solid #DF9B41;
+	color: #fff;
+	padding: 20px 0;
+}
+
+button {
+	background-color: #F47321;
+}
+
+button:hover {
+	background-color: #F47321;
+}
+
+.th:hover, .th:focus {
+	box-shadow: 0 0 6px 1px rgba(244, 115, 33, 0.5);
+}
+
+#logo {
+	display: block;
+	margin: 10px 0;
+}
+
+#logo img {
+	height: auto;
+	max-width: 300px;
+	width: 100%;
+}
+
+#header-social-icons {
+	display: none;
+	position: absolute;
+	right: 10px;
+	top: 0;
+}
+
+.social-icons {
+	list-style: none;
+	margin: 0;
+	padding: 10px 0;
+}
+
+.social-icons li {
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	display: inline-block;
+	line-height: 40px;
+	width: 40px;
+	-webkit-transition: border 200ms ease;
+	-moz-transition: border 200ms ease;
+	-o-transition: border 200ms ease;
+	-ms-transition: border 200ms ease;
+	transition: border 200ms ease;
+}
+
+.social-icons li a {
+	color: #ccc;
+	display: block;
+	font-size: 1.5rem;
+	height: 100%;
+	text-align: center;
+	width: 100%;
+	-webkit-transition: color 200ms ease;
+	-moz-transition: color 200ms ease;
+	-o-transition: color 200ms ease;
+	-ms-transition: color 200ms ease;
+	transition: color 200ms ease;
+}
+
+footer .social-icons {
+	padding: 0;
+}
+
+footer .social-icons li {
+	background: none;
+	border: 1px solid #fff;
+	line-height: 30px;
+	width: 30px;
+}
+
+footer .social-icons li a {
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+.social-icons li.social-facebook:hover {
+	border-color: #3b5998;
+}
+
+.social-icons li.social-facebook:hover a {
+	color: #3b5998;
+}
+
+.social-icons li.social-instagram:hover {
+	border-color: #517fa4;
+}
+
+.social-icons li.social-instagram:hover a {
+	color: #517fa4;
+}
+
+.social-icons li.social-linkedin:hover {
+	border-color: #007bb6;
+}
+
+.social-icons li.social-linkedin:hover a {
+	color: #007bb6;
+}
+
+.social-icons li.social-twitter:hover {
+	border-color: #00aced;
+}
+
+.social-icons li.social-twitter:hover a {
+	color: #00aced;
+}
+
+.social-icons li.social-google:hover {
+	border-color: #dd4b39;
+}
+
+.social-icons li.social-google:hover a {
+	color: #dd4b39;
+}
+
+#menu {
+	list-style: none;
+	margin: 0;
+}
+
+#menu li {
+	display: inline-block;
+	line-height: 40px;
+}
+
+#menu li a {
+	color: #CCC;
+	display: block;
+	font-family: 'Questrial';
+	font-weight: 700;
+	padding: 0 2px;
+	text-transform: lowercase;
+	-webkit-transition: color 200ms ease;
+	-moz-transition: color 200ms ease;
+	-o-transition: color 200ms ease;
+	-ms-transition: color 200ms ease;
+	transition: color 200ms ease;
+}
+
+#menu li.active a,
+#menu li:hover a {
+	color: #F47321;
+}
+
+#contents {
+	padding: 20px 0;
+}
+
+.gallery_thumb {
+	background: #F47321;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	display: block;
+	position: relative;
+}
+
+.gallery_title {
+	background: #F47321;
+	bottom: -1px;
+	color: #fff;
+	line-height: 1;
+	margin: 0;
+	padding: 10px;
+	position: absolute;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	width: 100%;
+}
+
+#copyright {
+	display: inline;
+	font-weight: 700;
+	font-size: 0.9rem;
+	padding: 0 1rem 0 0;
+}
+
+#rgg-logo {
+	display: inline;
+	opacity: 0.5;
+	-webkit-transition: opacity 400ms ease;
+	-moz-transition: opacity 400ms ease;
+	-o-transition: opacity 400ms ease;
+	-ms-transition: opacity 400ms ease;
+	transition: opacity 400ms ease;
+}
+
+#rgg-logo:hover {
+	opacity: 1;
+}
+
+/*.clearing-blackout {
+	background: rgba(51, 51, 51, 0.85);
+}
+
+.clearing-assembled .clearing-container .visible-img,
+.clearing-assembled .clearing-container .carousel {
+	background: none;
+}*/
+
+@media only screen and (min-width: 480px) {
+
+	#menu li a {
+		padding: 0 10px;
+	}
+
+}
+
+@media only screen and (min-width: 40.063em) {
+
+	#logo {
+		margin: 10px 0;
+	}
+
+	#header-social-icons {
+		display: block;
+	}
+
+	body > header nav {
+		bottom: 0;
+		position: absolute;
+		right: 0;
+	}
+
+	#menu li a {
+		padding: 0 10px;
+	}
+
+}

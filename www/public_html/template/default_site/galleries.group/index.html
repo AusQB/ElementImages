@@ -1,0 +1,51 @@
+{layout="galleries/.layout"}
+
+<div class="row">
+<div class="large-12 columns">
+
+{if segment_2 != ''}
+
+	{exp:channel:entries channel="galleries" limit="1"}
+
+	<div class="clearfix">
+		<h1 class="left">{title}</h1>
+		<a class="right" href="/galleries"><strong>Back to galleries <i class="fa fa-level-up"></i></strong></a>
+	</div>
+
+	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 pswp_gallery" itemscope itemtype="http://schema.org/ImageGallery">
+	{photos}
+	<li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+		<!-- <a href="/galleries/{url_title}/{image:url_title}"> -->
+		<a class="pswp_img th" href="{image:url:zoom}" itemprop="contentUrl" data-size="{image:width:zoom}x{image:height:zoom}">
+			<img data-interchange="[{image:url:zoom}, (default)], [{image:url:large}, (small)], [{image:url:medium}, (medium)], [{image:url:small}, (large)]" alt="{image:title}" />
+		</a>
+		<div class="caption" itemprop="caption description">{image:description}</div>
+	</li>
+	{/photos}
+	</ul>
+
+	{embed="galleries/.photoswipe" gallery="{entry_id}"}
+
+	{/exp:channel:entries}
+
+{if:else}
+
+	<h1>Galleries</h1>
+
+	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+	{exp:channel:entries channel="galleries" dynamic="no"}
+	{photos cover_only="true" limit="1"}
+	<li>
+		<a class="gallery_thumb" href="{url_title_path='galleries'}">
+			<img data-interchange="[{image:url:zoom}, (default)], [{image:url:large}, (small)], [{image:url:medium}, (medium)], [{image:url:small}, (large)]" alt="" />
+			<h2 class="gallery_title">{title}</h2>
+		</a>
+	</li>
+	{/photos}
+	{/exp:channel:entries}
+	</ul>
+
+{/if}
+
+</div>
+</div>
